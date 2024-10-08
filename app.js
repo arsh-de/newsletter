@@ -9,8 +9,8 @@ function validateEmail(e) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(e);
 }
-btn.addEventListener("click", function () {
-
+btn.addEventListener("click", function (event) {
+    event.preventDefault();
     if (validateEmail(email.value)) {
         card.classList.add("none");
         error.classList.remove("none");
@@ -24,7 +24,8 @@ btn.addEventListener("click", function () {
     }
 
 })
-dismiss.addEventListener("click", function () {
+dismiss.addEventListener("click", function (event) {
+    event.preventDefault();
     card.classList.remove("none");
     success.classList.add("none")
     error.classList.add("none");

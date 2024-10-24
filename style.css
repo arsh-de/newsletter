@@ -173,6 +173,10 @@ button:hover {
 }
 
 @media(max-width:768px) {
+    main {
+        max-width: 450px;
+    }
+
     #card {
         flex-direction: column-reverse;
         width: 100%;
@@ -206,6 +210,8 @@ button:hover {
         background: url(assets/images/illustration-sign-up-mobile.svg);
         padding: 0%;
         height: 284px;
+        background-size: cover;
+        background-repeat: no-repeat;
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;
     }
